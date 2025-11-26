@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20" preserveAspectRatio="xMidYMid meet">
+  <!-- Hoist blue stripe -->
+  <rect width="5" height="20" x="0" y="0" fill="#003399" />
+  <!-- Yellow background -->
+  <rect width="30" height="20" x="0" y="0" fill="#FFD100" />
+  <!-- Red stripes (Senyera) -->
+  <rect width="30" height="4" y="0" fill="#D52B1E" />
+  <rect width="30" height="4" y="6" fill="#D52B1E" />
+  <rect width="30" height="4" y="12" fill="#D52B1E" />
+  <rect width="30" height="4" y="18" fill="#D52B1E" />
+  <!-- Adjust for blue stripe overlap mask -->
+  <rect width="5" height="20" x="0" y="0" fill="#003399" />
+</svg>

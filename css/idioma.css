@@ -103,3 +103,43 @@ body {
 .tema-toggle:focus-visible { outline: 3px solid var(--dorado); outline-offset: 2px; }
 
 @keyframes bumpIn { 0% { transform: translate(40px, -50%); opacity: 0; } 100% { transform: translate(0, -50%); opacity: 1; } }
+
+/* Flags: show emoji on desktop, use Valencia image on mobile */
+.btn .flag-img {
+  display: inline-block; /* Mostrar por defecto en todas resoluciones */
+  width: 22px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 0.6rem;
+}
+.btn .flag-emoji {
+  display: none; /* Ocultar emoji ahora que usamos imagen en todas las resoluciones */
+  font-size: 1.2rem;
+  vertical-align: middle;
+  margin-right: 0.6rem;
+}
+
+/* Language menu icons (nav .idiomas) */
+.idiomas a .flag-img {
+  display: none;
+  width: 18px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 0.4rem;
+}
+.idiomas a .flag-emoji {
+  font-size: 1rem;
+  vertical-align: middle;
+  margin-right: 0.4rem;
+}
+
+/* Mobile: swap icon -> show Valencia flag image, hide emoji */
+@media (max-width: 640px) {
+  .btn .flag-img { display: inline-block; }
+  .btn .flag-emoji { display: none; }
+  .botones { gap: 0.8rem; }
+  .btn { padding: 0.8rem 1rem; font-size: 1rem; }
+  .idiomas a .flag-img { display: inline-block; }
+  .idiomas a .flag-emoji { display: none; }
+  .idiomas a { gap: 0.4rem; }
+}
