@@ -51,13 +51,13 @@
         <input type="hidden" name="idioma" value="日本語" />
 
         <label for="nombre">👤 お名前:</label>
-        <input type="text" id="nombre" name="nombre" required autocomplete="name" />
+        <input type="text" id="nombre" name="nombre" required autocomplete="name" minlength="2" placeholder="お名前" />
 
         <label for="email">📧 メールアドレス:</label>
-        <input type="email" id="email" name="email" required autocomplete="email" />
+        <input type="email" id="email" name="email" required autocomplete="email" inputmode="email" placeholder="you@example.com" />
 
         <label for="mensaje">📝 メッセージ:</label>
-        <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+        <textarea id="mensaje" name="mensaje" rows="6" required minlength="10" placeholder="ご用件をお知らせください"></textarea>
 
         <button type="submit">⚡ オリンポスへ送信</button>
       </form>
