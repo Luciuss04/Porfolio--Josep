@@ -437,9 +437,9 @@ footer .redes i {
 .tema-toggle:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(244, 196, 48, 0.4); }
 .tema-toggle:focus-visible { outline: 3px solid var(--dorado); outline-offset: 2px; }
 
-.tema-toggle-flotante { position: fixed; top: 50%; right: 16px; transform: translate(0, -50%); animation: bumpIn 0.6s ease-out; z-index: 1000; }
+.tema-toggle-flotante { position: fixed; bottom: 16px; left: 16px; transform: none; animation: bumpIn 0.6s ease-out; z-index: 1000; }
 
-@keyframes bumpIn { 0% { transform: translate(40px, -50%); opacity: 0; } 100% { transform: translate(0, -50%); opacity: 1; } }
+@keyframes bumpIn { 0% { transform: translateX(-24px); opacity: 0; } 100% { transform: translateX(0); opacity: 1; } }
 
 @keyframes pulseShadow { 0% { box-shadow: 0 4px 10px rgba(244,196,48,0.1); } 50% { box-shadow: 0 8px 20px rgba(244,196,48,0.5); } 100% { box-shadow: 0 4px 10px rgba(244,196,48,0.1); } }
 
