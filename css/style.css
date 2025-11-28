@@ -512,6 +512,8 @@ body, .hero, section, footer { transition: background-color 0.35s ease, color 0.
 .skills-grid .chip { padding: 0.4rem 0.7rem; border-radius: 999px; background-color: rgba(255,255,255,0.08); color: var(--dorado-suave); border: 1px solid rgba(244,196,48,0.35); font-weight: 600; font-size: 0.95rem; }
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 1rem; }
 .card { background: var(--gris-oscuro); border-radius: 14px; padding: 1.2rem; border-left: 5px solid var(--dorado); box-shadow: 0 4px 8px var(--sombra-suave); transition: transform 0.2s, box-shadow 0.3s; position: relative; overflow: hidden; }
+.card::after { content: ""; position: absolute; inset: 0; background: radial-gradient(220px 220px at var(--hx, 50%) var(--hy, 50%), rgba(244,196,48,0.08), transparent 60%); opacity: 0.6; mix-blend-mode: overlay; pointer-events: none; transition: opacity 0.25s ease; }
+.card:hover::after { opacity: 0.9; }
 .card:hover { transform: translateY(-3px); box-shadow: 0 8px 16px rgba(0,0,0,0.35); }
 .card h3 { color: var(--dorado); margin-bottom: 0.6rem; }
 .card p { margin-bottom: 0.8rem; }
