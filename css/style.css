@@ -263,6 +263,7 @@ h2 {
 .foto-perfil {
   width: 180px;
   border-radius: 50%;
+  border: 3px solid var(--dorado);
   display: block;
   margin: 1rem auto;
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
@@ -483,3 +484,6 @@ body, .hero, section, footer { transition: background-color 0.35s ease, color 0.
 .card .actions { display: flex; gap: 0.6rem; }
 .card .actions a { text-decoration: none; padding: 0.45rem 0.8rem; border-radius: 999px; font-weight: 700; background-color: rgba(255,255,255,0.12); color: var(--dorado-suave); transition: background-color 0.3s, transform 0.2s; }
 .card .actions a:hover { background-color: var(--dorado); color: var(--negro); transform: translateY(-2px); }
+nav .idiomas a[aria-current="page"], nav .idiomas a.active { color: var(--blanco); background-image: linear-gradient(var(--dorado), var(--dorado)); background-size: 100% 2px; background-position: 0% 100%; background-repeat: no-repeat; }
+.lang-notice { position: fixed; top: 10px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--dorado), var(--morado-oscuro)); color: var(--negro); padding: 0.45rem 0.8rem; border-radius: 999px; font-weight: 700; box-shadow: 0 4px 10px rgba(244, 196, 48, 0.3); opacity: 0; visibility: hidden; transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease; z-index: 998; }
+.lang-notice.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(2px); }

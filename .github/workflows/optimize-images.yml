@@ -1,0 +1,40 @@
+name: Optimize images
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "img/foto.jpeg"
+  workflow_dispatch:
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Squoosh CLI
+        run: npm i -g @squoosh/cli
+      - name: Convert foto.jpeg to WebP
+        run: |
+          mkdir -p img
+          if [ -f img/foto.jpeg ]; then
+            squoosh-cli --webp auto -d img img/foto.jpeg
+          fi
+      - name: Commit changes
+        run: |
+          if [ -f img/foto.webp ]; then
+            git config user.name "github-actions"
+            git config user.email "github-actions@github.com"
+            git add img/foto.webp
+            if ! git diff --cached --quiet; then
+              git commit -m "chore(images): add WebP version of foto.jpeg"
+              git push
+            fi
+          fi
