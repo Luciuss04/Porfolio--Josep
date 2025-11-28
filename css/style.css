@@ -436,8 +436,7 @@ footer .redes i {
 
 .tema-toggle:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(244, 196, 48, 0.4); }
 .tema-toggle:focus-visible { outline: 3px solid var(--dorado); outline-offset: 2px; }
-
-.tema-toggle-flotante { position: fixed; top: 16px; left: 16px; right: auto; transform: none; animation: bumpIn 0.6s ease-out; z-index: 1000; }
+.tema-toggle-flotante { position: fixed; top: 50px; left: 50px; right: auto; transform: none; animation: bumpIn 0.6s ease-out; z-index: 1000; }
 
 @keyframes bumpIn { 0% { transform: translateX(-24px); opacity: 0; } 100% { transform: translateX(0); opacity: 1; } }
 
@@ -470,7 +469,7 @@ body, .hero, section, footer { transition: background-color 0.35s ease, color 0.
 #backToTop.show { opacity: 1; visibility: visible; transform: translateY(0); }
 .tema-toggle-flotante { }
 @media (max-width: 640px) {
-  .tema-toggle-flotante { top: 12px; left: 12px; right: auto; bottom: auto; }
+  .tema-toggle-flotante { top: 50px; left: 50px; right: auto; bottom: auto; }
 }
 .gradient-text { background-image: linear-gradient(135deg, var(--dorado), var(--morado-claro)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .cta { display: flex; gap: 0.8rem; justify-content: center; align-items: center; margin-top: 1rem; }

@@ -3,16 +3,21 @@
   if (temaGuardado) document.documentElement.setAttribute('data-theme', temaGuardado);
   var btn = document.getElementById('toggle-tema');
   if (btn){
-    var claro = document.documentElement.getAttribute('data-theme') === 'light';
-    btn.textContent = claro ? (btn.textContent.indexOf('Toggle')===0?'Toggle theme':'☀️ Cambiar tema') : (btn.textContent.indexOf('Toggle')===0?'Toggle theme':'🌙 Cambiar tema');
-    btn.setAttribute('aria-pressed', claro ? 'true' : 'false');
+    var lang = (document.documentElement.getAttribute('lang')||'').toLowerCase();
+    var labels = { es: 'Cambiar tema', en: 'Toggle theme', va: 'Canviar tema', ja: 'テーマ切替' };
+    var base = labels[lang] || labels.en;
+    function update(){
+      var claro = document.documentElement.getAttribute('data-theme') === 'light';
+      btn.textContent = (claro ? '☀️ ' : '🌙 ') + base;
+      btn.setAttribute('aria-pressed', claro ? 'true' : 'false');
+    }
+    update();
     btn.addEventListener('click', function(){
       var actual = document.documentElement.getAttribute('data-theme');
       var nuevo = actual === 'light' ? 'dark' : 'light';
       if (nuevo === 'dark') document.documentElement.removeAttribute('data-theme'); else document.documentElement.setAttribute('data-theme', 'light');
       localStorage.setItem('tema', nuevo);
-      btn.setAttribute('aria-pressed', nuevo === 'light' ? 'true' : 'false');
-      btn.textContent = nuevo === 'light' ? (btn.textContent.indexOf('Toggle')===0?'Toggle theme':'☀️ Cambiar tema') : (btn.textContent.indexOf('Toggle')===0?'Toggle theme':'🌙 Cambiar tema');
+      update();
     });
   }
   var secciones = document.querySelectorAll('.reveal');
