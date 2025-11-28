@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/contacto.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-RXf+QSDCUQs6b4v5A9R2v6KUVKp1R9+XcMgy7pYzFSHLn3U4a8gE9F7R5C3XxR28Z59TLEEqzvvR1vpuYeIRsA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="canonical" href="contacto.html" />
   <link rel="alternate" hreflang="es" href="contacto.html" />
   <link rel="alternate" hreflang="en" href="../en/contact.html" />
@@ -19,8 +19,12 @@
   <link rel="alternate" hreflang="x-default" href="../index.html" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23f4c430'/><stop offset='1' stop-color='%235e3a8c'/></linearGradient></defs><circle cx='50' cy='50' r='50' fill='url(%23g)'/></svg>'" />
   <meta name="color-scheme" content="dark light" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self' https://discord.com https://discordapp.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; upgrade-insecure-requests" />
 </head>
 <body>
+  <script src="../js/framebreaker.js" defer></script>
+  <script src="../js/contact.js" defer></script>
   <a href="#main" class="skip-link">Saltar al contenido</a>
 
   <header class="hero">
@@ -75,79 +79,6 @@
       <a href="https://discord.com/users/443479189597716480" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i> Discord</a>
     </p>
   </footer>
-  <script>
-    const estat = document.getElementById("estado");
-    const webhookURL = window.CONFIG_WEBHOOK_URL || "";
-    const mention = window.CONFIG_MENTION || "";
-
-    document.getElementById("formulario").addEventListener("submit", async function (e) {
-      e.preventDefault();
-
-      const nom = document.getElementById("nombre").value.trim();
-      const correu = document.getElementById("email").value.trim();
-      const missatge = document.getElementById("mensaje").value.trim();
-      const idioma = "Español";
-
-      if (!nom || !correu || !missatge) {
-        estat.textContent = "⚠️ Por favor, completa todos los campos.";
-        estat.className = "mensaje-estado mensaje-error";
-        estat.style.display = "block";
-        return;
-      }
-
-      if (webhookURL) {
-        const embed = {
-          content: `${mention} ⚡ **¡Nuevo mensaje desde el Olimpo!**`,
-          embeds: [{
-            title: "🏛️ Mensaje recibido en el templo sagrado",
-            description: "Un visitante ha dejado su huella en el portal celestial. Atenea lo está leyendo con atención...",
-            color: 0x9B59B6,
-            fields: [
-              { name: "🌐 Idioma del formulario", value: idioma, inline: true },
-              { name: "👤 Nombre", value: nom, inline: true },
-              { name: "📧 Correo", value: correu, inline: true },
-              { name: "📝 Mensaje", value: missatge }
-            ],
-            timestamp: new Date().toISOString()
-          }]
-        };
-
-        fetch(webhookURL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(embed)
-        })
-        .then(() => {
-          estat.textContent = "✨ ¡Gracias! Tu mensaje ha sido enviado.";
-          estat.className = "mensaje-estado mensaje-exito";
-          estat.style.display = "block";
-          document.getElementById("formulario").reset();
-        })
-        .catch(err => {
-          estat.textContent = "❌ Error al enviar el mensaje: " + err.message;
-          estat.className = "mensaje-estado mensaje-error";
-          estat.style.display = "block";
-        });
-      } else {
-        const texto = `Idioma: ${idioma}\nNombre: ${nom}\nCorreo: ${correu}\nMensaje:\n${missatge}`;
-        try {
-          await navigator.clipboard.writeText(texto);
-          estat.textContent = "✨ Tu mensaje se ha copiado. Pégalo en tu app favorita.";
-          estat.className = "mensaje-estado mensaje-exito";
-          estat.style.display = "block";
-          document.getElementById("formulario").reset();
-        } catch (err) {
-          estat.textContent = "❌ No se pudo copiar el mensaje: " + err.message;
-          estat.className = "mensaje-estado mensaje-error";
-          estat.style.display = "block";
-        }
-      }
-    });
-    document.body.insertAdjacentHTML('beforeend','<button id="backToTop">↑</button>');
-    var topBtn = document.getElementById('backToTop');
-    topBtn.addEventListener('click', function(){ window.scrollTo({ top:0, behavior:'smooth' }); });
-    window.addEventListener('scroll', function(){ if(window.scrollY > 300){ topBtn.classList.add('show'); } else { topBtn.classList.remove('show'); } });
-  </script>
 
 </body>
 </html>

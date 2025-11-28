@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-RXf+QSDCUQs6b4v5A9R2v6KUVKp1R9+XcMgy7pYzFSHLn3U4a8gE9F7R5C3XxR28Z59TLEEqzvvR1vpuYeIRsA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="alternate" hreflang="es" href="../es/index.html" />
   <link rel="alternate" hreflang="en" href="../en/index.html" />
   <link rel="alternate" hreflang="va" href="../va/index.html" />
@@ -24,12 +24,16 @@
   <meta property="og:image" content="../img/es.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="color-scheme" content="dark light" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self' https://discord.com https://discordapp.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; upgrade-insecure-requests" />
   <link rel="canonical" href="index.html" />
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Person","name":"Josep Pérez Morente","url":"../es/index.html","sameAs":["https://github.com/Luciuss04","https://linkedin.com/in/Luciuss4","https://mastodon.social/@Luciuss4","https://discord.com/users/443479189597716480"]}
   </script>
 </head>
 <body>
+  <script src="../js/framebreaker.js" defer></script>
+  <script src="../js/site.js" defer></script>
   <a href="#main" class="skip-link">Saltar al contenido</a>
 
   <!-- Hero Section -->
@@ -55,6 +59,7 @@
           <li><a href="../jp/index.html" lang="ja" aria-label="日本語"><img src="../img/jp.png" alt="日本語" class="flag-img" /></a></li>
         </ul>
       </nav>
+      <div id="lang-notice" class="lang-notice" aria-live="polite" role="status">Redirigido al español según tu navegador</div>
       <div class="cta">
         <a class="cta-secondary" href="#proyectos">Ver proyectos</a>
       </div>
@@ -145,36 +150,6 @@
       <a href="https://mastodon.social/@Luciuss4" target="_blank" rel="me noopener noreferrer"> <i class="fab fa-mastodon"></i> Mastodon</a>
     </p>
   </footer>
-  <script>
-    (function(){
-      var temaGuardado = localStorage.getItem('tema');
-      if (temaGuardado) document.documentElement.setAttribute('data-theme', temaGuardado);
-      var btn = document.getElementById('toggle-tema');
-      if (!btn) return;
-      var claro = document.documentElement.getAttribute('data-theme') === 'light';
-      btn.textContent = claro ? '☀️ Cambiar tema' : '🌙 Cambiar tema';
-      btn.setAttribute('aria-pressed', claro ? 'true' : 'false');
-      btn.addEventListener('click', function(){
-        var actual = document.documentElement.getAttribute('data-theme');
-        var nuevo = actual === 'light' ? 'dark' : 'light';
-        if (nuevo === 'dark') document.documentElement.removeAttribute('data-theme'); else document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('tema', nuevo);
-        btn.setAttribute('aria-pressed', nuevo === 'light' ? 'true' : 'false');
-        btn.textContent = nuevo === 'light' ? '☀️ Cambiar tema' : '🌙 Cambiar tema';
-      });
-      var secciones = document.querySelectorAll('.reveal');
-      var io = new IntersectionObserver(function(entries){ entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('is-visible'); } }); }, { threshold: 0.15 });
-      secciones.forEach(function(s){ io.observe(s); });
-      var enlaces = document.querySelectorAll('.menu-hero a');
-      var mapa = Array.prototype.map.call(enlaces, function(a){ var id = a.getAttribute('href').replace('#',''); return {a:a, id:id, el:document.getElementById(id)}; });
-      window.addEventListener('scroll', function(){ var pos = window.scrollY + 100; var activo = null; mapa.forEach(function(m){ if(m.el && m.el.offsetTop <= pos) activo = m; }); enlaces.forEach(function(a){ a.classList.remove('active'); }); if(activo) activo.a.classList.add('active'); });
-      document.body.insertAdjacentHTML('beforeend','<button id="backToTop">↑</button>');
-      var topBtn = document.getElementById('backToTop');
-      topBtn.addEventListener('click', function(){ window.scrollTo({ top:0, behavior:'smooth' }); });
-      window.addEventListener('scroll', function(){ if(window.scrollY > 300){ topBtn.classList.add('show'); } else { topBtn.classList.remove('show'); } });
-      var cont = document.querySelector('.contenido-hero');
-      window.addEventListener('mousemove', function(ev){ if(!cont) return; var x = (ev.clientX / window.innerWidth - 0.5) * 10; var y = (ev.clientY / window.innerHeight - 0.5) * 10; document.documentElement.style.setProperty('--tiltX', x+'px'); document.documentElement.style.setProperty('--tiltY', y+'px'); });
-    })();
-  </script>
+  
 </body>
 </html>
