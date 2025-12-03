@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://luciuss04.github.io/Porfolio--Josep/sitemap.xml
