@@ -10,10 +10,10 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23f4c430'/><stop offset='1' stop-color='%235e3a8c'/></linearGradient></defs><circle cx='50' cy='50' r='50' fill='url(%23g)'/></svg>'" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/style.css?v=20251128d" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=20251205a" />
   
-  <link rel="alternate" hreflang="es" href="https://luciuss04.github.io/Porfolio--Josep/es/" />
+  <link rel="alternate" hreflang="es" href="https://luciuss04.github.io/Porfolio--Josep/" />
   <link rel="alternate" hreflang="en" href="https://luciuss04.github.io/Porfolio--Josep/en/" />
   <link rel="alternate" hreflang="va" href="https://luciuss04.github.io/Porfolio--Josep/va/" />
   <link rel="alternate" hreflang="ja" href="https://luciuss04.github.io/Porfolio--Josep/jp/" />
@@ -53,147 +53,155 @@
   </script>
 </head>
 <body>
-  <script src="../js/framebreaker.js?v=20251128e" defer></script>
-  <script src="../js/starfield.js?v=20251128e" defer></script>
-  <script src="../js/site.js?v=20251128e" defer></script>
-  <a href="#main" class="skip-link">コンテンツへ移動</a>
-
-  <!-- ヒーローセクション -->
-  <header class="hero">
-    <div class="contenido-hero">
-      <h1><span class="gradient-text">Josep Pérez Morente</span></h1>
-      <p class="subtitulo">生涯学習にコミット · JavaScriptとReact、Web開発への情熱を持つフルスタック</p>
-      <nav aria-label="主要ナビゲーション">
-        <ul class="menu-hero">
-          <li><a href="#about-me">自己紹介</a></li>
-          <li><a href="#skills">スキル</a></li>
-          <li><a href="#interests">興味</a></li>
-          <li><a href="#projects">プロジェクト</a></li>
-          <li><a href="#more-projects-jp">その他のプロジェクト</a></li>
-          <li><a href="contact.html">お問い合わせ</a></li>
-        </ul>
-      </nav>
-      <div id="lang-notice" class="lang-notice" aria-live="polite" role="status">ブラウザ設定に基づき日本語へリダイレクトしました</div>
-      <button id="toggle-tema" class="tema-toggle tema-toggle-flotante" aria-pressed="false">テーマ切替</button>
-      <nav aria-label="言語">
-        <ul class="idiomas">
-          <li><a href="../es/index.html" lang="es" aria-label="Español"><img src="../img/es.png" alt="Español" class="flag-img" /></a></li>
-          <li><a href="../en/index.html" lang="en" aria-label="English"><img src="../img/en.png" alt="English" class="flag-img" /></a></li>
-          <li><a href="../va/index.html" lang="va" aria-label="Valencià"><img src="../img/va.png" alt="Valencià" class="flag-img" /></a></li>
-          <li><a href="../jp/index.html" lang="ja" aria-label="日本語" aria-current="page"><img src="../img/jp.png" alt="日本語" class="flag-img" /></a></li>
-        </ul>
-      </nav>
-      <div class="cta">
-        <a class="cta-secondary" href="#projects">注目プロジェクトを見る</a>
-      </div>
-    </div>
+  <header class="site-header">
+    <a href="#hero" class="logo">JOSEP</a>
+    <nav class="site-nav">
+      <a href="#work">プロジェクト</a>
+      <a href="#about">自己紹介</a>
+      <a href="#contact" class="cta">お問い合わせ</a>
+      <ul class="idiomas" aria-label="言語">
+        <li><a href="../index.html" lang="es" aria-label="Español"><img src="../img/es.png" alt="Español" class="flag-img" /></a></li>
+        <li><a href="../en/index.html" lang="en" aria-label="English"><img src="../img/en.png" alt="English" class="flag-img" /></a></li>
+        <li><a href="../va/index.html" lang="va" aria-label="Valencià"><img src="../img/va.png" alt="Valencià" class="flag-img" /></a></li>
+        <li><a href="../jp/index.html" lang="ja" aria-label="日本語" aria-current="page"><img src="../img/jp.png" alt="日本語" class="flag-img" /></a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- メインコンテンツ -->
-  <main id="main">
-    <section id="about-me" class="reveal">
-      <h2>自己紹介</h2>
-      <img src="../img/foto.jpeg" alt="Josep Pérez Morenteのプロフィール写真" class="foto-perfil" loading="lazy" decoding="async" width="180" height="180" />
-      <p>
-        私はマルチプラットフォームアプリケーションの開発者であり、さまざまな環境に対応したデジタルソリューションの設計、実装、保守に関する技術的な経験と知識を持っています。
-      </p>
-      <p>
-        Flutter、React Native、Xamarin、PWAなどの最新技術を活用し、効率的でスケーラブルな製品を構築することに情熱を注いでいます。チームワークを重視し、明確なコミュニケーションと継続的な改善を心がけています。
-      </p>
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-inner">
+        <h1 class="hero-title"><span class="name">Josep Pérez Morente</span></h1>
+        <p class="hero-tagline">マルチプラットフォーム開発者 • 記憶に残るWeb体験を構築</p>
+        <p>Flutter、React Native、Xamarin、Webフレームワークでモダンなソリューションを設計・実装・保守しています。</p>
+        <div class="badges">
+          <span class="chip">Flutter</span>
+          <span class="chip">React Native</span>
+          <span class="chip">Xamarin</span>
+          <span class="chip">Web</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#work" class="btn primary magnetic hvr-shutter-out-horizontal">プロジェクトを見る</a>
+          <a href="#contact" class="btn ghost magnetic hvr-shutter-out-horizontal">話しましょう</a>
+        </div>
+      </div>
     </section>
 
-    <section id="skills" class="reveal">
-      <h2>スキル</h2>
-      <ul>
-        <li><strong>言語とフレームワーク：</strong> Dart、JavaScript、C#、Flutter、React Native、Xamarin</li>
-        <li><strong>UI/UXデザイン：</strong> ユーザー中心の適応型インターフェース</li>
-        <li><strong>API統合：</strong> RESTfulサービスの利用とデータ処理</li>
-        <li><strong>チームワーク：</strong> 明確なコミュニケーション、アジャイルな協力、成果重視</li>
-      </ul>
-      <ul class="skills-grid">
-        <li class="chip">JavaScript</li>
-        <li class="chip">React</li>
-        <li class="chip">Node.js</li>
-        <li class="chip">Next.js</li>
-        <li class="chip">CSS</li>
-        <li class="chip">MongoDB</li>
-        <li class="chip">Git</li>
-        <li class="chip">Sass</li>
-        <li class="chip">Express.js</li>
-      </ul>
-    </section>
-
-    <section id="interests" class="reveal">
-      <h2>興味</h2>
-      <ol>
-        <li>フロントエンド開発</li>
-        <li>人工知能</li>
-        <li>UX/UIデザイン</li>
-        <li>ゲームデザイン</li>
-      </ol>
-    </section>
-
-    <section id="projects" class="reveal">
-      <h2>注目プロジェクト</h2>
-      <div class="projects-grid">
-        <article class="card">
-          <h3>個人ポートフォリオ</h3>
-          <p>本サイト：アクセシブルな設計、ライト/ダークテーマ、背景アニメーション、SEO基礎。</p>
-          <div class="actions">
-            <a href="https://github.com/Luciuss04/Porfolio--Josep" target="_blank" rel="noopener noreferrer">プロジェクトを見る</a>
+    <section id="work" class="section">
+      <div class="section-head">
+        <h2 class="section-title">注目プロジェクト</h2>
+        <p class="section-subtitle">インタラクション、パフォーマンス、意図あるデザイン。</p>
+      </div>
+      <div class="grid">
+        <article class="card" data-id="p1">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=60" alt="個人ポートフォリオ — Web開発" loading="lazy" decoding="async"/><a class="overlay" href="https://luciuss04.github.io/Porfolio--Josep/" target="_blank" rel="noopener" aria-label="ページを開く"><i class="ph ph-arrow-up-right"></i><span>ページを開く</span><span class="btn xs primary hvr-shutter-out-horizontal">開く</span></a></div>
+          <div class="card-body">
+            <h3>個人ポートフォリオ</h3>
+            <p>アクセシブルな設計、ライト/ダークテーマ、アニメーション、SEO基礎。</p>
+            <span class="chip">アクセシビリティ</span>
+            <span class="chip">SEO</span>
+            <div class="card-actions">
+              <a class="btn sm primary hvr-shutter-out-horizontal" href="https://luciuss04.github.io/Porfolio--Josep/" target="_blank" rel="noopener">ページを開く</a>
+            </div>
           </div>
         </article>
-        <article class="card">
-          <h3>PoseidonUI · モデレーション</h3>
-          <p>コマンド、オートモデ、サーバー整備のユーティリティ。</p>
-          <div class="actions">
-            <a href="https://github.com/Luciuss04/PoseidonUI" target="_blank" rel="noopener noreferrer">プロジェクトを見る</a>
-            <a href="https://discord.com/oauth2/authorize?client_id=1425895912777187472&permissions=76822&scope=bot%20applications.commands&integration_type=0" target="_blank" rel="noopener noreferrer">招待</a>
-          </div>
-        </article>
-        <article class="card">
-          <h3>AteneaUI · 音楽ボット</h3>
-          <p>キュー再生、コマンド制御、プレイリスト対応。</p>
-          <div class="actions">
-            <a href="https://github.com/Luciuss04/AteneaUI" target="_blank" rel="noopener noreferrer">プロジェクトを見る</a>
-            <a href="https://discord.com/oauth2/authorize?client_id=1425800120057987073&permissions=3476544&scope=bot%20applications.commands&integration_type=0" target="_blank" rel="noopener noreferrer">招待</a>
+        <article class="card" data-id="p2">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=1200&q=60" alt="PoseidonUI — モデレーションパネル" loading="lazy" decoding="async"/><a class="overlay" href="https://github.com/luciuss04/PoseidonUI" target="_blank" rel="noopener" aria-label="リポジトリを開く"><i class="ph ph-arrow-up-right"></i><span>リポジトリ</span><span class="btn xs primary hvr-shutter-out-horizontal">開く</span></a></div>
+          <div class="card-body">
+            <h3>PoseidonUI · モデレーション</h3>
+            <p>コマンド、オートモデ、サーバー向けユーティリティ。</p>
+            <span class="chip">モデレーション</span>
+            <span class="chip">ユーティリティ</span>
+            <div class="card-actions">
+              <a class="btn sm ghost hvr-shutter-out-horizontal" href="https://github.com/luciuss04/PoseidonUI" target="_blank" rel="noopener">リポジトリを開く</a>
+            </div>
           </div>
         </article>
       </div>
     </section>
-    <section id="more-projects-jp" class="reveal">
-      <h2>プロジェクト</h2>
-      <div class="projects-grid">
-        <article class="card">
-          <h3>AteneaUI · 音楽ボット</h3>
-          <p>キュー、プレイリスト、分かりやすいコマンド対応の音楽ボット。</p>
-          <div class="actions">
-            <a href="https://github.com/Luciuss04/AteneaUI" target="_blank" rel="noopener noreferrer">プロジェクトを見る</a>
-            <a href="https://discord.com/oauth2/authorize?client_id=1425800120057987073&permissions=3476544&scope=bot%20applications.commands&integration_type=0" target="_blank" rel="noopener noreferrer">招待</a>
-          </div>
-        </article>
-        <article class="card">
-          <h3>PoseidonUI · モデレーション</h3>
-          <p>コミュニティを整えるためのモデレーションとユーティリティ。</p>
-          <div class="actions">
-            <a href="https://github.com/Luciuss04/PoseidonUI" target="_blank" rel="noopener noreferrer">プロジェクトを見る</a>
-            <a href="https://discord.com/oauth2/authorize?client_id=1425895912777187472&permissions=76822&scope=bot%20applications.commands&integration_type=0" target="_blank" rel="noopener noreferrer">招待</a>
-          </div>
-        </article>
+
+    <section id="skills" class="section">
+      <div class="section-head">
+        <h2 class="section-title">スキル</h2>
+        <p class="section-subtitle">スタックと技術的習熟</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill"><span class="chip">JavaScript</span><div class="bar" data-level="92"><span class="bar-fill"></span></div></div>
+        <div class="skill"><span class="chip">React</span><div class="bar" data-level="90"><span class="bar-fill"></span></div></div>
+        <div class="skill"><span class="chip">Node.js</span><div class="bar" data-level="85"><span class="bar-fill"></span></div></div>
+        <div class="skill"><span class="chip">Next.js</span><div class="bar" data-level="80"><span class="bar-fill"></span></div></div>
+        <div class="skill"><span class="chip">CSS / Sass</span><div class="bar" data-level="88"><span class="bar-fill"></span></div></div>
+        <div class="skill"><span class="chip">Express.js</span><div class="bar" data-level="78"><span class="bar-fill"></span></div></div>
+        <div class="skill"><span class="chip">MongoDB</span><div class="bar" data-level="75"><span class="bar-fill"></span></div></div>
+        <div class="skill"><span class="chip">Flutter</span><div class="bar" data-level="82"><span class="bar-fill"></span></div></div>
+        <div class="skill"><span class="chip">React Native</span><div class="bar" data-level="80"><span class="bar-fill"></span></div></div>
+        <div class="skill"><span class="chip">Xamarin</span><div class="bar" data-level="70"><span class="bar-fill"></span></div></div>
+      </div>
+    </section>
+
+    <section id="interests" class="section">
+      <div class="section-head">
+        <h2 class="section-title">興味</h2>
+        <p class="section-subtitle">インスピレーションの源</p>
+      </div>
+      <div class="masonry">
+        <div class="interest-card"><i class="ph ph-code"></i><h3>フロントエンド開発</h3><p>丁寧なインタラクションと優れた性能。</p></div>
+        <div class="interest-card"><i class="ph ph-brain"></i><h3>人工知能</h3><p>自動化とスマートな体験。</p></div>
+        <div class="interest-card"><i class="ph ph-user-interface"></i><h3>UX/UIデザイン</h3><p>ユーザー中心のアクセシブルなUI。</p></div>
+        <div class="interest-card"><i class="ph ph-game-controller"></i><h3>ゲームデザイン</h3><p>魅力的なメカニクスとフィードバック。</p></div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-head">
+        <h2 class="section-title">自己紹介</h2>
+        <p class="section-subtitle">デザイン、コード、好奇心。</p>
+      </div>
+      <div class="about">
+        <div class="about-media"><div class="avatar"></div></div>
+        <div class="about-body">
+          <p>多様な環境に適応するデジタルソリューションの設計・実装・保守に経験を持つ開発者です。モダン技術とアクセシビリティ中心のUIに注力しています。</p>
+          <ul class="skills">
+            <li>言語とフレームワーク: Dart, JavaScript, C#, Flutter, React Native, Xamarin</li>
+            <li>UI/UXデザイン: ユーザー中心の適応型インターフェース</li>
+            <li>API統合: RESTfulの利用とデータ処理</li>
+            <li>チームワーク: 明確なコミュニケーションとアジャイルな協力</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="contact">
+        <h2>一緒に作りましょうか？</h2>
+        <p>Webやクロスプラットフォームアプリのプロジェクトに対応します。返信は迅速です。</p>
+        <div class="contact-actions">
+          <a class="btn primary hvr-shutter-out-horizontal" href="mailto:luciuss4@proton.me?subject=新規プロジェクト&body=こんにちはJosep%2C%0A%0Aアイデアを共有したいです。予算%3A%20%0A納期%3A%20%0A%0A参考リンク%3A%20" title="メール送信">Email</a>
+          <a class="btn ghost hvr-shutter-out-horizontal" href="https://github.com/luciuss04" target="_blank" rel="noopener" title="GitHub">GitHub</a>
+          <a class="btn ghost hvr-shutter-out-horizontal" href="https://x.com/luciuss04" target="_blank" rel="noopener" title="X">X</a>
+          <a class="btn ghost hvr-shutter-out-horizontal" href="https://discord.com/users/443479189597716480" target="_blank" rel="noopener" title="Discord">Discord</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- フッター -->
-  <footer class="fade-in">
-    <p>© 2025 Josep Pérez Morente</p>
-    <p class="redes">
-      <a href="https://github.com/Luciuss04" target="_blank" rel="noopener noreferrer">GitHub</a> ·
-      <a href="https://linkedin.com/in/Luciuss4" target="_blank" rel="noopener noreferrer">LinkedIn</a> ·
-      <a href="https://discord.com/users/443479189597716480" target="_blank" rel="noopener noreferrer">Discord</a>
-      <a href="https://mastodon.social/@Luciuss4" target="_blank" rel="me noopener noreferrer">Mastodon</a>
-    </p>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2025 Josep</span>
+      <div class="socials">
+        <a class="hvr-pulse" href="https://github.com/luciuss04" aria-label="GitHub" target="_blank" rel="noopener" title="GitHub"><i class="ph ph-github-logo"></i></a>
+        <a class="hvr-pulse" href="https://x.com/luciuss04" aria-label="X" target="_blank" rel="noopener" title="X"><i class="ph ph-twitter-logo"></i></a>
+        <a class="hvr-pulse" href="https://discord.com/users/443479189597716480" aria-label="Discord" target="_blank" rel="noopener" title="Discord"><i class="ph ph-discord-logo"></i></a>
+      </div>
+    </div>
   </footer>
-  
+  <div class="cursor" aria-hidden="true"></div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
+  <script src="../script.js?v=20251205a" defer></script>
 </body>
 </html>

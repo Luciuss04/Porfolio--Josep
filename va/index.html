@@ -10,10 +10,10 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23f4c430'/><stop offset='1' stop-color='%235e3a8c'/></linearGradient></defs><circle cx='50' cy='50' r='50' fill='url(%23g)'/></svg>'" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/style.css?v=20251128d" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=20251205a" />
   
-  <link rel="alternate" hreflang="es" href="https://luciuss04.github.io/Porfolio--Josep/es/" />
+  <link rel="alternate" hreflang="es" href="https://luciuss04.github.io/Porfolio--Josep/" />
   <link rel="alternate" hreflang="en" href="https://luciuss04.github.io/Porfolio--Josep/en/" />
   <link rel="alternate" hreflang="va" href="https://luciuss04.github.io/Porfolio--Josep/va/" />
   <link rel="alternate" hreflang="ja" href="https://luciuss04.github.io/Porfolio--Josep/jp/" />
@@ -53,148 +53,155 @@
   </script>
 </head>
 <body>
-  <script src="../js/framebreaker.js?v=20251128e" defer></script>
-  <script src="../js/starfield.js?v=20251128e" defer></script>
-  <script src="../js/site.js?v=20251128e" defer></script>
-  <a href="#main" class="skip-link">Anar directament al contingut</a>
-
-  <!-- Secció Hero -->
-  <header class="hero">
-    <div class="contenido-hero">
-      <h1><span class="gradient-text">Josep Pérez Morente</span></h1>
-      <p class="subtitulo">Compromés amb l’aprenentatge continu · Full Stack amb passió per JavaScript, React i el desenvolupament web</p>
-      <nav aria-label="Navegació principal">
-        <ul class="menu-hero">
-          <li><a href="#sobre-mi">Sobre mi</a></li>
-          <li><a href="#habilitats">Habilitats</a></li>
-          <li><a href="#interessos">Interessos</a></li>
-          <li><a href="#projectes">Projectes</a></li>
-          <li><a href="#mes-projectes">Més projectes</a></li>
-          <li><a href="contacte.html">Contacte</a></li>
-        </ul>
-      </nav>
-      <div id="lang-notice" class="lang-notice" aria-live="polite" role="status">Redirigit al valencià segons el teu navegador</div>
-      <button id="toggle-tema" class="tema-toggle tema-toggle-flotante" aria-pressed="false">Canviar tema</button>
-      <nav aria-label="Idioma">
-        <ul class="idiomas">
-          <li><a href="../es/index.html" lang="es" aria-label="Español"><img src="../img/es.png" alt="Español" class="flag-img" /></a></li>
-          <li><a href="../en/index.html" lang="en" aria-label="English"><img src="../img/en.png" alt="English" class="flag-img" /></a></li>
-          <li><a href="../va/index.html" lang="va" aria-label="Valencià" aria-current="page"><img src="../img/va.png" alt="Valencià" class="flag-img" /></a></li>
-          <li><a href="../jp/index.html" lang="ja" aria-label="日本語"><img src="../img/jp.png" alt="日本語" class="flag-img" /></a></li>
-        </ul>
-      </nav>
-      <div class="cta">
-        <a class="cta-secondary" href="#projectes">Veure projectes destacats</a>
-      </div>
-    </div>
+  <header class="site-header">
+    <a href="#hero" class="logo">JOSEP</a>
+    <nav class="site-nav">
+      <a href="#work">Projectes</a>
+      <a href="#about">Sobre mi</a>
+      <a href="#contact" class="cta">Contacte</a>
+      <ul class="idiomas" aria-label="Idioma">
+        <li><a href="../index.html" lang="es" aria-label="Español"><img src="../img/es.png" alt="Español" class="flag-img" /></a></li>
+        <li><a href="../en/index.html" lang="en" aria-label="English"><img src="../img/en.png" alt="English" class="flag-img" /></a></li>
+        <li><a href="../va/index.html" lang="va" aria-label="Valencià" aria-current="page"><img src="../img/va.png" alt="Valencià" class="flag-img" /></a></li>
+        <li><a href="../jp/index.html" lang="ja" aria-label="日本語"><img src="../img/jp.png" alt="日本語" class="flag-img" /></a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Contingut principal -->
-  <main id="main">
-    <section id="sobre-mi" class="reveal">
-      <h2>Sobre mi</h2>
-      <img src="../img/foto.jpeg" alt="Foto de perfil de Josep Pérez Morente" class="foto-perfil" loading="lazy" decoding="async" width="180" height="180" />
-      <p>
-        Sóc desenvolupador d'aplicacions multiplataforma amb una sòlida formació tècnica i experiència en el disseny, implementació i manteniment de solucions digitals en diversos entorns operatius.
-      </p>
-      <p>
-        Especialitzat en tecnologies modernes com Flutter, React Native, Xamarin i frameworks web progressius. M'encanta transformar requisits funcionals en productes eficients, escalables i amb una experiència d'usuari optimitzada. Treballe bé en equip, comunique amb claredat i m'adapte a entorns dinàmics amb un enfocament en resultats i millora contínua.
-      </p>
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-inner">
+        <h1 class="hero-title"><span class="name">Josep Pérez Morente</span></h1>
+        <p class="hero-tagline">Desenvolupador multiplataforma • Construïsc experiències web memorables</p>
+        <p>Sóc desenvolupador d'aplicacions multiplataforma. Dissenye, implemente i mantinc solucions modernes amb Flutter, React Native, Xamarin i frameworks web.</p>
+        <div class="badges">
+          <span class="chip">Flutter</span>
+          <span class="chip">React Native</span>
+          <span class="chip">Xamarin</span>
+          <span class="chip">Web</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#work" class="btn primary magnetic hvr-shutter-out-horizontal">Veure projectes</a>
+          <a href="#contact" class="btn ghost magnetic hvr-shutter-out-horizontal">Parlem</a>
+        </div>
+      </div>
     </section>
 
-    <section id="habilitats" class="reveal">
-      <h2>Habilitats</h2>
-      <ul>
-        <li><strong>Llenguatges i frameworks:</strong> Dart, JavaScript, C#, Flutter, React Native, Xamarin.</li>
-        <li><strong>Disseny UI/UX:</strong> Interfícies adaptatives centrades en l'experiència d'usuari.</li>
-        <li><strong>Integració d'API:</strong> Consum de serveis RESTful i gestió de dades.</li>
-        <li><strong>Treball en equip:</strong> Comunicació clara, col·laboració àgil i enfocament en objectius.</li>
-      </ul>
-      <ul class="skills-grid">
-        <li class="chip">JavaScript</li>
-        <li class="chip">React</li>
-        <li class="chip">Node.js</li>
-        <li class="chip">Next.js</li>
-        <li class="chip">CSS</li>
-        <li class="chip">MongoDB</li>
-        <li class="chip">Git</li>
-        <li class="chip">Sass</li>
-        <li class="chip">Express.js</li>
-      </ul>
-    </section>
-
-    <section id="interessos" class="reveal">
-      <h2>Interessos</h2>
-      <ol>
-        <li>Desenvolupament frontend</li>
-        <li>Intel·ligència artificial</li>
-        <li>Disseny UX/UI</li>
-        <li>Disseny de videojocs</li>
-      </ol>
-    </section>
-
-    <section id="projectes" class="reveal">
-      <h2>Projectes destacats</h2>
-      <div class="projects-grid">
-        <article class="card">
-          <h3>Portafolis personal</h3>
-          <p>Aquesta pàgina: disseny accessible, tema clar/fosc, animacions i SEO bàsic.</p>
-          <div class="actions">
-            <a href="https://github.com/Luciuss04/Porfolio--Josep" target="_blank" rel="noopener noreferrer">Veure projecte</a>
+    <section id="work" class="section">
+      <div class="section-head">
+        <h2 class="section-title">Projectes destacats</h2>
+        <p class="section-subtitle">Interaccions, rendiment i disseny amb intenció.</p>
+      </div>
+      <div class="grid">
+        <article class="card" data-id="p1">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=60" alt="Portafolis personal — desenvolupament web" loading="lazy" decoding="async"/><a class="overlay" href="https://luciuss04.github.io/Porfolio--Josep/" target="_blank" rel="noopener" aria-label="Obrir pàgina"><i class="ph ph-arrow-up-right"></i><span>Obrir pàgina</span><span class="btn xs primary hvr-shutter-out-horizontal">Obrir</span></a></div>
+          <div class="card-body">
+            <h3>Portafolis personal</h3>
+            <p>Pàgina accessible amb tema clar/fosc, animacions i SEO bàsic.</p>
+            <span class="chip">Accessibilitat</span>
+            <span class="chip">SEO</span>
+            <div class="card-actions">
+              <a class="btn sm primary hvr-shutter-out-horizontal" href="https://luciuss04.github.io/Porfolio--Josep/" target="_blank" rel="noopener">Obrir pàgina</a>
+            </div>
           </div>
         </article>
-        <article class="card">
-          <h3>PoseidonUI · Moderació</h3>
-          <p>Comandes, automod i utilitats per mantindre servidors ordenats.</p>
-          <div class="actions">
-            <a href="https://github.com/Luciuss04/PoseidonUI" target="_blank" rel="noopener noreferrer">Veure projecte</a>
-            <a href="https://discord.com/oauth2/authorize?client_id=1425895912777187472&permissions=76822&scope=bot%20applications.commands&integration_type=0" target="_blank" rel="noopener noreferrer">Invitar</a>
-          </div>
-        </article>
-        <article class="card">
-          <h3>AteneaUI · Bot de Música</h3>
-          <p>Reproducció en cua, control per comandes i suport per llistes.</p>
-          <div class="actions">
-            <a href="https://github.com/Luciuss04/AteneaUI" target="_blank" rel="noopener noreferrer">Veure projecte</a>
-            <a href="https://discord.com/oauth2/authorize?client_id=1425800120057987073&permissions=3476544&scope=bot%20applications.commands&integration_type=0" target="_blank" rel="noopener noreferrer">Invitar</a>
+        <article class="card" data-id="p2">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=1200&q=60" alt="PoseidonUI — panell de moderació" loading="lazy" decoding="async"/><a class="overlay" href="https://github.com/luciuss04/PoseidonUI" target="_blank" rel="noopener" aria-label="Obrir repositori"><i class="ph ph-arrow-up-right"></i><span>Obrir repo</span><span class="btn xs primary hvr-shutter-out-horizontal">Obrir</span></a></div>
+          <div class="card-body">
+            <h3>PoseidonUI · Moderació</h3>
+            <p>Comandes, automod i utilitats per a servidors.</p>
+            <span class="chip">Moderació</span>
+            <span class="chip">Utilitats</span>
+            <div class="card-actions">
+              <a class="btn sm ghost hvr-shutter-out-horizontal" href="https://github.com/luciuss04/PoseidonUI" target="_blank" rel="noopener">Obrir repositori</a>
+            </div>
           </div>
         </article>
       </div>
     </section>
-    <section id="mes-projectes" class="reveal">
-      <h2>Projectes</h2>
-      <div class="projects-grid">
-        <article class="card">
-          <h3>AteneaUI · Bot de Música</h3>
-          <p>Bot musical amb cua, llistes i comandes intuïtives.</p>
-          <div class="actions">
-            <a href="https://github.com/Luciuss04/AteneaUI" target="_blank" rel="noopener noreferrer">Veure projecte</a>
-            <a href="https://discord.com/oauth2/authorize?client_id=1425800120057987073&permissions=3476544&scope=bot%20applications.commands&integration_type=0" target="_blank" rel="noopener noreferrer">Invitar</a>
-          </div>
-        </article>
-        <article class="card">
-          <h3>PoseidonUI · Moderació</h3>
-          <p>Moderació i utilitats per mantindre la comunitat en ordre.</p>
-          <div class="actions">
-            <a href="https://github.com/Luciuss04/PoseidonUI" target="_blank" rel="noopener noreferrer">Veure projecte</a>
-            <a href="https://discord.com/oauth2/authorize?client_id=1425895912777187472&permissions=76822&scope=bot%20applications.commands&integration_type=0" target="_blank" rel="noopener noreferrer">Invitar</a>
-          </div>
-        </article>
+
+    <section id="skills" class="section">
+      <div class="section-head">
+        <h2 class="section-title">Habilitats</h2>
+        <p class="section-subtitle">Stack i domini tècnic</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill"><span class="chip">JavaScript</span><div class="bar" data-level="92"><span class="bar-fill"></span></div></div>
+        <div class="skill"><span class="chip">React</span><div class="bar" data-level="90"><span class="bar-fill"></span></div></div>
+        <div class="skill"><span class="chip">Node.js</span><div class="bar" data-level="85"><span class="bar-fill"></span></div></div>
+        <div class="skill"><span class="chip">Next.js</span><div class="bar" data-level="80"><span class="bar-fill"></span></div></div>
+        <div class="skill"><span class="chip">CSS / Sass</span><div class="bar" data-level="88"><span class="bar-fill"></span></div></div>
+        <div class="skill"><span class="chip">Express.js</span><div class="bar" data-level="78"><span class="bar-fill"></span></div></div>
+        <div class="skill"><span class="chip">MongoDB</span><div class="bar" data-level="75"><span class="bar-fill"></span></div></div>
+        <div class="skill"><span class="chip">Flutter</span><div class="bar" data-level="82"><span class="bar-fill"></span></div></div>
+        <div class="skill"><span class="chip">React Native</span><div class="bar" data-level="80"><span class="bar-fill"></span></div></div>
+        <div class="skill"><span class="chip">Xamarin</span><div class="bar" data-level="70"><span class="bar-fill"></span></div></div>
+      </div>
+    </section>
+
+    <section id="interests" class="section">
+      <div class="section-head">
+        <h2 class="section-title">Interessos</h2>
+        <p class="section-subtitle">Què m'inspira</p>
+      </div>
+      <div class="masonry">
+        <div class="interest-card"><i class="ph ph-code"></i><h3>Desenvolupament frontend</h3><p>Interaccions cuidades i rendiment excel·lent.</p></div>
+        <div class="interest-card"><i class="ph ph-brain"></i><h3>Intel·ligència artificial</h3><p>Automatització i experiències intel·ligents.</p></div>
+        <div class="interest-card"><i class="ph ph-user-interface"></i><h3>Disseny UX/UI</h3><p>Interfícies accessibles centrades en l'usuari.</p></div>
+        <div class="interest-card"><i class="ph ph-game-controller"></i><h3>Disseny de videojocs</h3><p>Mecàniques que enganxen i bon feedback.</p></div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-head">
+        <h2 class="section-title">Sobre mi</h2>
+        <p class="section-subtitle">Disseny, codi i curiositat.</p>
+      </div>
+      <div class="about">
+        <div class="about-media"><div class="avatar"></div></div>
+        <div class="about-body">
+          <p>Sóc desenvolupador d'aplicacions multiplataforma amb experiència creant solucions digitals adaptades a diversos entorns. Especialitzat en tecnologies modernes i interfícies accessibles.</p>
+          <ul class="skills">
+            <li>Llenguatges i frameworks: Dart, JavaScript, C#, Flutter, React Native, Xamarin</li>
+            <li>Disseny UI/UX: Interfícies adaptatives centrades en l'usuari</li>
+            <li>Integració d'API: Consum RESTful i gestió de dades</li>
+            <li>Treball en equip: Comunicació clara i col·laboració àgil</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="contact">
+        <h2>Construïm alguna cosa junts?</h2>
+        <p>Disponibilitat per a projectes web i apps multiplataforma. Resposta ràpida.</p>
+        <div class="contact-actions">
+          <a class="btn primary hvr-shutter-out-horizontal" href="mailto:luciuss4@proton.me?subject=Nou%20projecte&body=Hola%20Josep%2C%0A%0AVull%20compartir%20la%20meua%20idea.%20Pressupost%3A%20%0ATerminis%3A%20%0A%0AEnllaç%20de%20referència%3A%20" title="Enviar email">Email</a>
+          <a class="btn ghost hvr-shutter-out-horizontal" href="https://github.com/luciuss04" target="_blank" rel="noopener" title="GitHub">GitHub</a>
+          <a class="btn ghost hvr-shutter-out-horizontal" href="https://x.com/luciuss04" target="_blank" rel="noopener" title="X">X</a>
+          <a class="btn ghost hvr-shutter-out-horizontal" href="https://discord.com/users/443479189597716480" target="_blank" rel="noopener" title="Discord">Discord</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- Peu de pàgina -->
-  <footer class="fade-in">
-    <p>© 2025 Josep Pérez Morente</p>
-    <p class="redes">
-      <a href="https://github.com/Luciuss04" target="_blank" rel="noopener noreferrer">GitHub</a> ·
-      <a href="https://linkedin.com/in/Luciuss4" target="_blank" rel="noopener noreferrer">LinkedIn</a> ·
-      <a href="https://discord.com/users/443479189597716480" target="_blank" rel="noopener noreferrer">Discord</a>
-      <a href="https://mastodon.social/@Luciuss4" target="_blank" rel="me noopener noreferrer">Mastodon</a>
-
-    </p>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2025 Josep</span>
+      <div class="socials">
+        <a class="hvr-pulse" href="https://github.com/luciuss04" aria-label="GitHub" target="_blank" rel="noopener" title="GitHub"><i class="ph ph-github-logo"></i></a>
+        <a class="hvr-pulse" href="https://x.com/luciuss04" aria-label="X" target="_blank" rel="noopener" title="X"><i class="ph ph-twitter-logo"></i></a>
+        <a class="hvr-pulse" href="https://discord.com/users/443479189597716480" aria-label="Discord" target="_blank" rel="noopener" title="Discord"><i class="ph ph-discord-logo"></i></a>
+      </div>
+    </div>
   </footer>
-  
+  <div class="cursor" aria-hidden="true"></div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
+  <script src="../script.js?v=20251205a" defer></script>
 </body>
 </html>
