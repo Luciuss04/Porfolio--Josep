@@ -52,9 +52,6 @@
   }
   var cont = document.querySelector('.contenido-hero');
   window.addEventListener('mousemove', function(ev){ if(!cont) return; var x = (ev.clientX / window.innerWidth - 0.5) * 10; var y = (ev.clientY / window.innerHeight - 0.5) * 10; document.documentElement.style.setProperty('--tiltX', x+'px'); document.documentElement.style.setProperty('--tiltY', y+'px'); });
-  var params = new URLSearchParams(location.search);
-  var notice = document.getElementById('lang-notice');
-  if (params.get('from') === 'redirect' && notice) { notice.classList.add('show'); setTimeout(function(){ notice.classList.remove('show'); }, 3200); }
   var langEl = document.documentElement.getAttribute('lang')||'';
   var links = document.querySelectorAll('nav .idiomas a');
   links.forEach(function(a){
